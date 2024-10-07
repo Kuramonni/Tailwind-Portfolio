@@ -10,25 +10,40 @@
     />
 
     <title>Tailwind-Site</title>
+    <style>
+      /* Force light theme even if dark mode is preferred */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: white !important; /* Force light background */
+          color: black !important; /* Force light text color */
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-white text-black">
     <!--NAVBAR-->
     <nav id="nav" class="relative container mx-auto p-6">
       <!--flex container-->
-      <div3xl
-        class="flex items-center justify-center md:justify-start space-x-12"
-      >
+      <div class="flex items-center justify-center md:justify-start space-x-12">
         <!--logo-->
         <div class="pt-2">
           <img class="size-20 rounded-full" src="img/monni.png" alt="logo" />
         </div>
         <!--nav links-->
         <div class="hidden text-xl md:flex space-x-16 lg:text-2xl">
-          <a href="#nav" class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 lowercase">Home</a>
-          <a href="#skillset" class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 lowercase"
+          <a
+            href="#nav"
+            class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 uppercase"
+            >Home</a
+          >
+          <a
+            href="#skillset"
+            class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 uppercase"
             >Skillset</a
           >
-          <a href="#hobbies" class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 lowercase"
+          <a
+            href="#hobbies"
+            class="font-bold hover:text-darkGrey hover:underline hover:underline-offset-4 uppercase"
             >Hobbies</a
           >
         </div>
@@ -362,7 +377,7 @@
             />
             <div class="p-6 flex flex-col items-center space-y-6">
               <h5 class="text-2xl font-bold">Videogames</h5>
-              <p class="text-sm text-darkGrey">
+              <p class="text-sm text-black">
                 My all time favourites are the Dark Souls series, as well as
                 Bloodborne and Elden Ring. I'm extremely passionate about the
                 lore of these games and love to delve into it further in the
@@ -382,7 +397,7 @@
             />
             <div class="p-6 flex flex-col items-center space-y-8">
               <h5 class="text-2xl font-bold">Fitness</h5>
-              <p class="text-sm text-darkGrey">
+              <p class="text-sm text-black">
                 Training is a key part of my life. I focus on weight training,
                 but also try to keep up my Yoga and Pilates routines. I see gym
                 training as a great counterbalance to working in front of a
@@ -402,7 +417,7 @@
             />
             <div class="p-6 flex flex-col items-center space-y-6">
               <h5 class="text-2xl font-bold">Horses</h5>
-              <p class="text-sm text-darkGrey">
+              <p class="text-sm text-black">
                 I have been riding horses since I was a child. I have also
                 worked as a stable hand and have experience in horse care and
                 training. Horses have always been close to my heart and I enjoy
@@ -424,7 +439,7 @@
     </section>
 
     <!--FOOTER-->
-    <footer class="bg-darkGrey">
+    <footer class="bg-darkBlue">
       <div class="mx-auto text-center py-16 text-white">
         Copyright &copy; Armi Lampen 2024
       </div>

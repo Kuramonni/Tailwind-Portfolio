@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*html'],
+  content: ['./*html'], // Specify your HTML files for purge
   theme: {
     screens: {
       sm: '480px',
@@ -19,6 +19,6 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
+  darkMode: 'dark', // Correctly disable dark mode entirely
 }
-
